@@ -1,0 +1,5 @@
+1. OOPS
+2. DTOs
+3. DI
+4. IOC
+5. Modules file - (imports, exports and providers)
