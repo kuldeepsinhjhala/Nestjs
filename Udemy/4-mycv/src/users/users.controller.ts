@@ -2,9 +2,11 @@ import { Body, Controller, Post, Get, Delete, Patch, Param, Query, NotFoundExcep
 import { createUserDto } from './dtos/create-user.dto';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { UsersService } from './users.service';
-import { Not } from 'typeorm';
+import { Serialize } from '../interceptors/serialize.interceptor';
+import { UserDto } from '../users/dtos/user.dto'
 
 @Controller('auth')
+@Serialize(UserDto)
 export class UsersController {
     constructor(private usersService: UsersService) { }
     @Post('/signup')

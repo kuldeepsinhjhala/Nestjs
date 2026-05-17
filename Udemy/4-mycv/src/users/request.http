@@ -8,16 +8,16 @@ content-type: application/json
 }
 
 ### Find a Partictula user with a given ID
-GET http://localhost:3000/auth/20
+GET http://localhost:3000/auth/2
 
 ### Find all users with a given email
-GET http://localhost:3000/auth?email=kj@gmail.com
+GET http://localhost:3000/auth?email=kuldeep@gmail.com
 
 ### Delete a user given id
 DELETE http://localhost:3000/auth/1
-d
+
 ### Update a user
-PATCH http://localhost:3000/auth/2
+PATCH http://localhost:3000/auth/3
 Content-Type: application/json
 
 {

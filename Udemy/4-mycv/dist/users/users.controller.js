@@ -17,6 +17,8 @@ const common_1 = require("@nestjs/common");
 const create_user_dto_1 = require("./dtos/create-user.dto");
 const update_user_dto_1 = require("./dtos/update-user.dto");
 const users_service_1 = require("./users.service");
+const serialize_interceptor_1 = require("../interceptors/serialize.interceptor");
+const user_dto_1 = require("../users/dtos/user.dto");
 let UsersController = class UsersController {
     usersService;
     constructor(usersService) {
@@ -81,6 +83,7 @@ __decorate([
 ], UsersController.prototype, "updateUser", null);
 exports.UsersController = UsersController = __decorate([
     (0, common_1.Controller)('auth'),
+    (0, serialize_interceptor_1.Serialize)(user_dto_1.UserDto),
     __metadata("design:paramtypes", [users_service_1.UsersService])
 ], UsersController);
 //# sourceMappingURL=users.controller.js.map
