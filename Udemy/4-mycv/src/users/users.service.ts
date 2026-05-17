@@ -17,6 +17,7 @@ export class UsersService {
     //Short Code
     constructor(@InjectRepository(User) private repo: Repository<User>) {
     }
+    
     create(email: string, password: string) {
         const user = this.repo.create({ email, password }); //used to create an instance of an entity
         //Processing can be done on entity
