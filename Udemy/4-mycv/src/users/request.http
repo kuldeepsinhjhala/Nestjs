@@ -1,20 +1,38 @@
-### Create a new user
+### Signup
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "email": "jaymataji@gmail.com",
+  "email": "kj1@gmail.com",
   "password": "aarfvesrtv"
 }
+
+
+### Signin
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email": "kj1@gmail.com",
+  "password": "aarfvesrtv"
+}
+
+
+### Signout
+POST http://localhost:3000/auth/signout
+
 
 ### Find a Partictula user with a given ID
 GET http://localhost:3000/auth/2
 
+
 ### Find all users with a given email
 GET http://localhost:3000/auth?email=kuldeep@gmail.com
 
+
 ### Delete a user given id
 DELETE http://localhost:3000/auth/1
+
 
 ### Update a user
 PATCH http://localhost:3000/auth/3
@@ -23,3 +41,14 @@ Content-Type: application/json
 {
   "email": "aaaaa@aaaaa.com"
 }
+
+
+# ### Set a color
+# GET http://localhost:3000/auth/colors/red
+
+# ### Get a color
+# GET http://localhost:3000/auth/colors
+
+
+### Who Am I
+GET http://localhost:3000/auth/whooami
